@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import formatCurrency from '../util'
+//import formatCurrency from '../util'
 
 class Products extends Component {
   render() {
@@ -14,7 +14,7 @@ class Products extends Component {
                   <p>{product.title}</p>
                 </a>
                 <div className='product-price'>
-                  <div>{formatCurrency(product.price)}</div>
+                  <div>£{product.price.toFixed(2)}</div>
                   <button className='button primary'>Add To Cart</button>
                 </div>
               </div>

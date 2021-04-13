@@ -123,3 +123,16 @@ footer {
 .button.primary:hover {
   background-color: rgb(223, 223, 4);
 }
+
+/** filter */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: 0.1rem solid #c0c0c0;
+}
+
+.filter div {
+  flex: 1;
+}

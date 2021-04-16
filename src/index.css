@@ -196,6 +196,12 @@ footer {
   margin-left: 1rem;
 }
 
+.remove {
+  padding: 0.8rem;
+  background-color: #04719c;
+  color: #ffffff;
+}
+
 /** checkout form */
 .form {
   width: 100%;
@@ -216,4 +222,30 @@ footer {
 .form input {
   padding: 1rem;
   border: 0.1rem solid #c0c0c0;
+}
+
+/** Modal */
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 96vh;
+}
+
+.product-details img {
+  margin: 0 auto;
+  max-width: 46rem;
+  max-height: 100vh;
+}
+
+.product-details-description {
+  flex: 1 1;
+  margin: 1rem;
+}
+
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 2.5rem;
+  z-index: 1000;
 }

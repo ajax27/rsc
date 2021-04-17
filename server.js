@@ -4,16 +4,16 @@ const mongoose = require('mongoose')
 
 const app = express()
 app.use(express.json())
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
+const port = process.env.PORT || 5000
+
+mongoose.connect(
+  process.env.MONGODB_URL || 'mongodb://localhost/react-shop-db',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  }
 )
-mongoose.connect('mongodb://localhost/react-shop-db', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-})
 
 const Product = mongoose.model(
   'products',
@@ -42,7 +42,5 @@ app.delete('/api/products/:id', async (req, res) => {
   const deleteProduct = await Product.findByIdAndDelete(req.params.id)
   res.send(deleteProduct)
 })
-
-const port = process.env.PORT || 5000
 
 app.listen(port, () => console.log(`Server listening on port: ${port}`))

@@ -249,3 +249,33 @@ footer {
   top: 2.5rem;
   z-index: 1000;
 }
+
+/** Order Details */
+.order-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.order-details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.order-details li div {
+  padding: 1rem;
+}
+
+.order-details .items {
+  text-align: right;
+  padding: 2rem 0;
+  color: #06b2f7;
+}
+
+.success-message {
+  color: #197c19;
+}

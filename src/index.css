@@ -39,12 +39,14 @@ header {
   background-color: #203040;
   color: #ffffff;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
 }
 header a {
   color: #ffffff;
   text-decoration: none;
+  margin: 0 3rem;
 }
 main {
   grid-area: main;
@@ -278,4 +280,28 @@ footer {
 
 .success-message {
   color: #197c19;
+}
+
+/** Orders */
+.orders {
+  width: 80%;
+  padding: 10px 10px;
+  margin: auto;
+}
+
+.orders h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+td {
+  padding: 6px;
+}
+
+th {
+  text-align: left;
 }
